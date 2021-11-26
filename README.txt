@@ -1,4 +1,4 @@
-======================================================================================
+======================================================================================   
 This program is a Discord Chatbot built for the Cornucopia Discord Server to handle
 utility and logging functions formerly handled by Discord Chatbot Eli. 
 
