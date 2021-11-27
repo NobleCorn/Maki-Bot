@@ -10,19 +10,19 @@ module.exports = client =>{
         console.log(`<CLIENT>${member.username}(${member.id}) has joined the server.`); //Logs member join in console.
         
         //Member role auto assign.
-        let memberRole = member.guild.roles.find(role => role.id == `765345784698503170`);//Get role "The Bois"
-        member.addRole(memberRole);//Assign role "The Bois"
+        let memberRole = member.guild.roles.cache.find(role => role.id == `765345784698503170`);//Get role "The Bois"
+        member.roles.add(memberRole);//Assign role "The Bois"
 
         //Welcome channel & Modlog messages.
-        member.guild.channels.get(LiveServerWelcomeChannel).send(`Hello, <@${member.id}>! Welcome to The Cornucopia!`);//#welcome
-        member.guild.channels.get(LiveServerModeratorChannel).send(`<@${member.id}> has joined the server.`);//#modlog
+        member.guild.channels.cache.get(LiveServerWelcomeChannel).send(`Hello, <@${member.id}>! Welcome to The Cornucopia!`);//#welcome
+        member.guild.channels.cache.get(LiveServerModeratorChannel).send(`<@${member.id}> has joined the server.`);//#modlog
     })
 
 
     //This doesnt work right... eh.
     client.on(`guildMemberRemove`, member =>{
         console.log(`<CLIENT>${member.username}(${member.id}) has left the server.`); //Logs member leave in console.
-        member.guild.channels.get(LiveServerModeratorChannel).send(`User with the ID (${member.id}) has left the server.\n
+        member.guild.channels.cache.get(LiveServerModeratorChannel).send(`User with the ID (${member.id}) has left the server.\n
         I dunno how to display their name here, so check the ID here if you really wanna know.\nhttps://discord.id/`) //Modlog message.
         
     })

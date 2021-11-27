@@ -1,5 +1,5 @@
 const Discord = require('discord.js');//Imports Discord.js
-const client = new Discord.Client({ intents: ["GUILDS", "GUILD_MESSAGES", "GUILD_PRESENCES",] }) //Defines this bot as Client & sets intents
+const client = new Discord.Client({ intents: ["GUILDS", "GUILD_MESSAGES", "GUILD_PRESENCES", "GUILD_MEMBERS"] }) //Defines this bot as Client & sets intents
 const { prefix, token } = require('./config.json'); //Get the prefix & Token
 const command = require('./command'); //Import command handler.
 const welcome = require('./welcome'); //Import greeter.
@@ -666,7 +666,7 @@ client.on('ready', () =>
 
 //Chat logging for debugging & moderation. 
 client.on("messageCreate", (message) => {
-	console.log(+message.channel.name+ `/` +message.author.username+  `: `+message.content+ ``);
+	console.log(``+message.channel.name+ `/` +message.author.username+  `: `+message.content+ ``);
 });
 
 //Automatic Family Shoutouts
