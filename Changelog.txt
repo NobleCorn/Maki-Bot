@@ -57,4 +57,6 @@ v 2.3a - 11/25/2021
 ~Removed Joke, Jail, and Dab
 ~Changed how chat log displays in Console
 ~Removed Herobrine
+v 2.3a Hotfix 1 - 11/25/2021
+~Fixed welcome.js still operating like this is discord.js v7
 -============================================-
