@@ -3,7 +3,7 @@ This program is a Discord Chatbot built for the Cornucopia Discord Server to han
 utility and logging functions formerly handled by Discord Chatbot Eli. 
 ======================================================================================
 -====================================-
-@Author(s) - Corey 'NobleCorn' Englerth
+@Author(s) - Corey 'NobleCorn' 
 @Requirements - [Node.js v16.13, Discord.js v13.1]
 @Version - 2.3a Hotfix 1
 @Title - The Interaction Update
